@@ -74,6 +74,10 @@
    // 1. 子组件与父组件通信
    emits: ['hello'] // 类似 props 声明
    context.emit("parentEvent", val)
+
+   // composition
+   const emit = defineEmits(['child-event']);
+   emit('child-event', 'Hello World');
    
    // 2.插槽
    <template v-slot:name>
